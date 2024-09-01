@@ -1,0 +1,88 @@
+@import "./reset";
+@import  "./variables";
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Scribble&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+.app{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+    font-family: "Nothing You Could Do", cursive;
+    background-color: darkslategray;
+}
+
+.nav{
+ align-items: center;
+}
+.cardCont{
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+align-items: center;
+gap: 8rem;
+margin-bottom: 3rem;
+
+}
+
+.cards{
+width: 32rem;
+height: 25rem;
+position: relative;
+cursor: pointer;
+}
+.cc{
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 1.6s ease;
+    width: 100%;
+    height: 100%;
+    perspective: 1000px;
+}
+.cards:hover .cc{
+    transform: rotateY(180deg);
+    box-shadow: 5px 5px 5px 5px rgb(39, 38, 38);
+    border-radius: 10px;
+}
+.front, .back{
+position: absolute;
+width: 100%;
+height: 100%;
+backface-visibility: hidden;
+-webkit-backface-visibility: hidden;
+}
+
+.front h3 {
+position: absolute;
+bottom: 3rem;
+color: orange;
+padding: 0.3rem;
+background-color: rgba(167, 5, 5, 0.676) ;
+border-radius: 1rem;
+}
+.front img {
+    width: 100%;
+    height: 100%;
+    border-radius: 0.7rem;
+    box-shadow: 5px 5px 10px 10px rgb(39,38,38);
+    object-fit: cover;
+}
+.back p {
+    font-weight: 700;
+    font-size: 1rem;
+}
+.back{
+    transform: rotateY(180deg);
+    align-items: start;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    background-color: $October-2-hex;
+    color: $October-4-hex;
+    align-items: center;
+    padding-top:  2rem;
+    text-align: center;
+}
